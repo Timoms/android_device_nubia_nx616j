@@ -13,11 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter nx616j,$(TARGET_DEVICE)),)
-
-LOCAL_PATH := device/nubia/nx616j/
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(CLEAR_VARS)
 endif
